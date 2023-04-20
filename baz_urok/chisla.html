@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/css.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <div class="menu">
+                <a href="../index.html"><img class="arrow" src="../img/Arrow 1.png" alt="" /></a>
+                <a class="menu_text" href="">Числа</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Выберите букву</button>
+        <div id="myDropdown" class="dropdown-content">
+
+            <a href="javascript:l_image('../img/а.jpg', 'A')">А</a>
+            <a href="javascript:l_image('../img/б.jpg', 'Б')">Б</a>
+            <a href="javascript:l_image('../img/в.jpg', 'В')">В</a>
+            <a href="javascript:l_image('../img/г.jpg', 'Г')">Г</a>
+            <a href="javascript:l_image('../img/д.jpg', 'Д')">Д</a>
+            <a href="javascript:l_image('../img/е.jpg', 'Е')">Е</a>
+            <a href="javascript:l_image('../img/ё.jpg', 'Ё')">Ё</a>
+            <a href="javascript:l_image('../img/ж.jpg', 'Ж')">Ж</a>
+            <a href="javascript:l_image('../img/з.jpg', 'З')">З</a>
+            <a href="javascript:l_image('../img/и.jpg', 'И')">И</a>
+            <a href="javascript:l_image('../img/й.jpg', 'Й')">Й</a>
+            <a href="javascript:l_image('../img/к.jpg', 'К')">К</a>
+            <a href="javascript:l_image('../img/л.jpg', 'Л')">Л</a>
+            <a href="javascript:l_image('../img/м.jpg', 'М')">М</a>
+            <a href="javascript:l_image('../img/н.jpg', 'Н')">Н</a>
+        </div>
+        <img src="../img/а.jpg" name="example_img"><br>
+            <div id="example_text">А</div>
+
+
+        <script>
+            /* Когда пользователь нажимает на кнопку, переключаться раскрывает содержимое */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            // Закрыть раскрывающийся список, если пользователь щелкнет за его пределами.
+            window.onclick = function (event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+            
+        </script>
+<script type="text/javascript">
+    function l_image(a, b) {
+        document.example_img.src = a;
+        document.getElementById("example_text").innerHTML = b;
+    }
+</script>
+</body>
+
+</html>
